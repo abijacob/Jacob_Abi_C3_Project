@@ -19,7 +19,7 @@ public class Restaurant {
 
     public boolean isRestaurantOpen() {
 
-        if ((getCurrentTime().isBefore(closingTime))&&((getCurrentTime().isAfter(openingTime)))) {
+        if ((getCurrentTime().isBefore(closingTime))&&((getCurrentTime().isAfter(openingTime)||getCurrentTime().equals(openingTime)))) {
             return true;
         }
         return false;
@@ -67,4 +67,8 @@ public class Restaurant {
         return name;
     }
 
+    public double getOrderTotal(List<String> selectedItems) {
+
+        return  0;
+    }
 }
